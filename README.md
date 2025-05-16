@@ -14,7 +14,7 @@ Learn how to:
 - Zoom into the ligand binding site and compute RMSD
 - Interpret structural confidence using pLDDT and PAE
 
-> 🔧 This tutorial also includes a practical introduction to ChimeraX for alignment and ligand analysis.
+> This tutorial also includes a practical introduction to ChimeraX for alignment and ligand analysis.
 
 ---
 
@@ -50,7 +50,7 @@ This upcoming tutorial will show how to:
 Clone the repository and begin with the 1ATP tutorial:
 
 ```bash
-git clone https://github.com/richcmwang/af3-tutorials.git
+git clone https://github.com/richcmwang/AlphaFold-3-Tutorial-Series.git
 cd af3-tutorials
 ```
 
