@@ -55,4 +55,4 @@ cd tutorials
 ```
 
 Open the first tutorial here:  
-`tutorials/1ATP_AF3_ATP.md`
+`tutorials/af3_1ATP_server_tutorial.ipynb`
