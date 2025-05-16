@@ -50,7 +50,7 @@ This upcoming tutorial will show how to:
 Clone the repository and begin with the 1ATP tutorial:
 
 ```bash
-git clone https://github.com/your-username/af3-tutorials.git
+git clone https://github.com/richcmwang/af3-tutorials.git
 cd af3-tutorials
 ```
 
