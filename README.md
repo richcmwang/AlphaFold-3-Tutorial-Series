@@ -51,7 +51,7 @@ Clone the repository and begin with the 1ATP tutorial:
 
 ```bash
 git clone https://github.com/richcmwang/AlphaFold-3-Tutorial-Series.git
-cd af3-tutorials
+cd tutorials
 ```
 
 Open the first tutorial here:  
