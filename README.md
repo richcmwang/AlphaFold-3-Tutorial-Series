@@ -6,7 +6,7 @@ This repository contains a step-by-step guide to running and interpreting predic
 
 ## Available Tutorial
 
-### [1. Predicting ATP-Bound PKA (1ATP)](tutorials/1ATP_AF3_ATP.md)
+### [1. Predicting ATP-Bound PKA (1ATP)](tutorials/af3_1ATP_server_tutorial.ipynb)
 Learn how to:
 - Use the AlphaFold 3 server to predict a protein–ligand complex
 - Visualize the results with **ChimeraX**
