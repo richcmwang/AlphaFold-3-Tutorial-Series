@@ -14,24 +14,11 @@ def load_json_file(file_path):
         print(f"Error: Invalid JSON in file '{file_path}': {str(e)}")
         raise
 
-from IPython.display import display, HTML
-import pandas as pd
-
-from IPython.display import display, HTML
-import pandas as pd
-
-from IPython.display import display, HTML
-import pandas as pd
-
-from IPython.display import display, HTML
-import pandas as pd
-
-from IPython.display import display, HTML
-import pandas as pd
-
-def display_scores_as_dataframes(data):
+def display_scores_as_dataframes(data, ligand="ATP"):
     # Define clean chain labels
-    chain_labels = ['Chain 0 (Protein)', 'Chain 1 (ATP)']
+    chain_labels = ['Chain 0 (Protein)', f"Chain 1 ({ligand})"]
+    # Dynamically generate chain labels
+    # chain_labels = [f'Chain {i}' for i in range(len(data['chain_iptm']))]
 
     # Create overall scores
     overall_scores = pd.DataFrame({
@@ -48,22 +35,22 @@ def display_scores_as_dataframes(data):
     # Per-chain DataFrame
     per_chain = pd.DataFrame({
         'Chain': chain_labels,
-        'iPTM': [f"{x:.2f}" for x in data['chain_iptm']],
-        'pTM': [f"{x:.2f}" for x in data['chain_ptm']]
+        'iPTM': [f"{x:.2f}" for x in data['chain_iptm'][:2]],
+        'pTM': [f"{x:.2f}" for x in data['chain_ptm'][:2]]
     }).set_index('Chain')
 
     # Pairwise matrices
-    iptm_matrix = pd.DataFrame(
-        data['chain_pair_iptm'],
+    iptm_matrix = (pd.DataFrame(
+        [data['chain_pair_iptm'][i][:2] for i in range(2)],
         index=[f'Against {label}' for label in chain_labels],
         columns=chain_labels
-    ).map(lambda x: f"{x:.2f}")
+    ).iloc[:2, :2]).map(lambda x: f"{x:.2f}")
 
-    pae_matrix = pd.DataFrame(
-        data['chain_pair_pae_min'],
+    pae_matrix = (pd.DataFrame(
+        [data['chain_pair_pae_min'][i][:2] for i in range(2)],
         index=[f'Against {label}' for label in chain_labels],
         columns=chain_labels
-    ).map(lambda x: f"{x:.2f}")
+    ).iloc[:2, :2]).map(lambda x: f"{x:.2f}")
 
     # Convert tables to HTML
     html1 = overall_scores.to_html(classes='df', border=1)
@@ -127,96 +114,5 @@ def display_scores_as_dataframes(data):
 
 
 
-# def display_scores_as_dataframes(data):
-#     # Create individual DataFrames
-#     overall_scores = pd.DataFrame({
-#         'Metric': ['Ranking score', 'pTM', 'ipTM', 'Fraction disordered', 'Has clash'],
-#         'Value': [
-#             f"{data['ranking_score']:.2f}",
-#             f"{data['ptm']:.2f}",
-#             f"{data['iptm']:.2f}",
-#             f"{data['fraction_disordered']:.0%}",
-#             'Yes' if data['has_clash'] else 'No'
-#         ]
-#     }).set_index('Metric')
-
-#     per_chain = pd.DataFrame({
-#         'Chain': [f'Chain {i+1}' for i in range(len(data['chain_iptm']))],
-#         'iPTM': [f"{x:.2f}" for x in data['chain_iptm']],
-#         'pTM': [f"{x:.2f}" for x in data['chain_ptm']]
-#     }).set_index('Chain')
-
-#     iptm_matrix = pd.DataFrame(
-#         data['chain_pair_iptm'],
-#         index=[f'Against Chain {i+1}' for i in range(len(data['chain_pair_iptm']))],
-#         columns=[f'Chain {i+1}' for i in range(len(data['chain_pair_iptm'][0]))]
-#     ).map(lambda x: f"{x:.2f}")
-
-#     pae_matrix = pd.DataFrame(
-#         data['chain_pair_pae_min'],
-#         index=[f'Against Chain {i+1}' for i in range(len(data['chain_pair_pae_min']))],
-#         columns=[f'Chain {i+1}' for i in range(len(data['chain_pair_pae_min'][0]))]
-#     ).map(lambda x: f"{x:.2f}")
-
-#     # Display stacked tables using line breaks
-#     display(HTML("<h3> Overall Scores</h3>"))
-#     display(overall_scores)
-#     display(HTML("<br>"))
-
-#     display(HTML("<h3> Per-Chain Metrics</h3>"))
-#     display(per_chain)
-#     display(HTML("<br>"))
-
-#     display(HTML("<h3> Pairwise iPTM Matrix</h3>"))
-#     display(iptm_matrix)
-#     display(HTML("<br>"))
-
-#     display(HTML("<h3> Pairwise PAE Min Matrix</h3>"))
-#     display(pae_matrix)
 
 
-# def display_scores_as_dataframes(data):
-#     # Overall Scores DataFrame
-#     overall_scores = pd.DataFrame({
-#         'Metric': ['Ranking score', 'pTM', 'ipTM', 'Fraction disordered', 'Has clash'],
-#         'Value': [
-#             f"{data['ranking_score']:.2f}",
-#             f"{data['ptm']:.2f}",
-#             f"{data['iptm']:.2f}",
-#             f"{data['fraction_disordered']:.0%}",
-#             'Yes' if data['has_clash'] else 'No'
-#         ]
-#     }).set_index('Metric')
-    
-#     # Per-chain metrics DataFrame
-#     per_chain = pd.DataFrame({
-#         'Chain': [f'Chain {i+1}' for i in range(len(data['chain_iptm']))],
-#         'iPTM': [f"{x:.2f}" for x in data['chain_iptm']],
-#         'pTM': [f"{x:.2f}" for x in data['chain_ptm']]
-#     }).set_index('Chain')
-    
-#     # Pairwise matrices
-#     iptm_matrix = pd.DataFrame(
-#         data['chain_pair_iptm'],
-#         index=[f'Against Chain {i+1}' for i in range(len(data['chain_pair_iptm']))],
-#         columns=[f'Chain {i+1}' for i in range(len(data['chain_pair_iptm'][0]))]
-#     ).map(lambda x: f"{x:.2f}")
-    
-#     pae_matrix = pd.DataFrame(
-#         data['chain_pair_pae_min'],
-#         index=[f'Against Chain {i+1}' for i in range(len(data['chain_pair_pae_min']))],
-#         columns=[f'Chain {i+1}' for i in range(len(data['chain_pair_pae_min'][0]))]
-#     ).map(lambda x: f"{x:.2f}")
-    
-#     # Display all DataFrames with titles
-#     print("=== OVERALL SCORES ===")
-#     display(overall_scores)
-    
-#     print("\n=== PER-CHAIN METRICS ===")
-#     display(per_chain)
-    
-#     print("\n=== PAIRWISE iPTM MATRIX ===")
-#     display(iptm_matrix)
-    
-#     print("\n=== PAIRWISE PAE MIN MATRIX ===")
-#     display(pae_matrix)
