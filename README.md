@@ -43,9 +43,7 @@ This upcoming tutorial will show how to:
 
 - How to run AlphaFold 3 for protein–ligand systems
 - How to visualize and align predicted structures using ChimeraX
-- How to assess prediction quality using pLDDT, PAE, and RMSD
-- Guidance on interpreting structure predictions and basic validation
-
+- How to assess prediction quality using pLDDT, PAE, and RMSD, and interpret structure predictions with basic validation
 ------
 
 ## Requirements
