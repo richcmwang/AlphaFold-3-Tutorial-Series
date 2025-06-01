@@ -1,7 +1,6 @@
 # AlphaFold 3 Tutorial Series
 
-This repository contains a step-by-step guide to running and interpreting predictions using **AlphaFold 3**, with a focus on real protein–ligand systems. These tutorials are designed for researchers, developers, and students interested in structure prediction, drug discovery, and computational biology.
-
+This repository offers an introduction to AlphaFold 3, focusing on understanding its architecture, running structure predictions, and interpreting prediction results.
 ------
 
 ## Walkthrough Overview
