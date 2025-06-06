@@ -27,7 +27,7 @@ Learn how to:
 
 ------
 
-### [2. Predicting Protein–Ligand Binding in 7M41 with AlphaFold 3 and Visualization with NGLView](https://colab.research.google.com/github/richcmwang/AlphaFold-3-Tutorial-Series/blob/main/tutorials/af3_7M41_local_tutorial.ipynb)
+### [2. Predicting Protein–Ligand Binding in 7M41 with AlphaFold 3](https://colab.research.google.com/github/richcmwang/AlphaFold-3-Tutorial-Series/blob/main/tutorials/af3_7M41_local_tutorial.ipynb)
 
 Learn how to:
 
