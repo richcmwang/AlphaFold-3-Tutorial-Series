@@ -27,30 +27,15 @@ Learn how to:
 
 ------
 
-## Coming Soon
+### [2. Running AlphaFold 3 Locally: 7M41 with Custom Ligand YQG](https://colab.research.google.com/github/richcmwang/AlphaFold-3-Tutorial-Series/blob/main/tutorials/af3_7M41_local_tutorial.ipynb)
 
-### [2. Running AlphaFold 3 Locally: 7M41 with Custom Ligand YQG]
+Learn how to:
 
-This upcoming tutorial will show how to:
-
-- Install and run AlphaFold 3 locally
-- Model systems **not supported by the AF3 server**, such as ligands outside the CCD whitelist
-- Reproduce the protein–ligand structure of **7M41** including custom ligand **YQG**
-
-------
-
-## What You’ll Learn
-
-- How to run AlphaFold 3 for protein–ligand systems
-- How to visualize and align predicted structures using ChimeraX
-- How to assess prediction quality using pLDDT, PAE, and RMSD, and interpret structure predictions with basic validation
-------
-
-## Requirements
-
-- ChimeraX (for offline visualization)
-- AlphaFold 3 server access (for walkthrough and 1ATP tutorial)
-- Python + Docker (for local runs — covered in tutorial 2)
+- Install and run AlphaFold 3 locally, including setting up Docker and pulling the latest model image.
+- Reproduce the protein–ligand structure of 7M41, including the custom ligand YQG, which is not supported by the public AlphaFold 3 server.
+- Perform output analysis by examining key metrics like pLDDT, PAE, and RMSD to assess model confidence and structure quality.
+- Visualize and compare 3D structures using NGLView, enabling interactive exploration and alignment of predicted and experimental models.
+- Manipulate and refine protein-ligand structures using Biopython and MDAnalysis, providing a deeper understanding of the local environment around the ligand.
 
 ------
 
