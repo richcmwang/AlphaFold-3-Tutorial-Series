@@ -35,7 +35,6 @@ Learn how to:
 - Reproduce the protein–ligand structure of 7M41, including the custom ligand YQG, which is not supported by the public AlphaFold 3 server.
 - Perform output analysis by examining key metrics like pLDDT, PAE, and RMSD to assess model confidence and structure quality.
 - Visualize and compare 3D structures using NGLView, enabling interactive exploration and alignment of predicted and experimental models.
-- Manipulate and refine protein-ligand structures using Biopython and MDAnalysis, providing a deeper understanding of the local environment around the ligand.
 
 ------
 
