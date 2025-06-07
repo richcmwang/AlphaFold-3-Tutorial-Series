@@ -1,6 +1,10 @@
 # AlphaFold 3 Tutorial Series
 
 This repository offers an introduction to AlphaFold 3, focusing on understanding its architecture, running structure predictions, and interpreting prediction results.
+
+<div align="center">
+<img src="images/3D_image.png" width="500">
+</div>
 ------
 
 ## Walkthrough Overview
