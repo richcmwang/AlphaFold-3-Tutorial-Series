@@ -2,7 +2,7 @@
 
 This repository offers an introduction to AlphaFold 3, focusing on understanding its architecture, running structure predictions, and interpreting prediction results.
 
-> **Note:** This tutorial series is a work in progress and constantly evolving. Expect ongoing updates and refinements and our understanding evolve.
+> **Note:** This tutorial series is a work in progress and constantly evolving. Expect ongoing updates and refinements as my understanding evolves.
 
 
 <div align="center">
