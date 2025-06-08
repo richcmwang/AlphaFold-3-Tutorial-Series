@@ -2,6 +2,9 @@
 
 This repository offers an introduction to AlphaFold 3, focusing on understanding its architecture, running structure predictions, and interpreting prediction results.
 
+> **Note:** This tutorial series is a work in progress and constantly evolving. Expect ongoing updates and refinements and our understanding evolve.
+
+
 <div align="center">
 <img src="images/3D_image.png" width="500">
 </div>
@@ -10,7 +13,7 @@ This repository offers an introduction to AlphaFold 3, focusing on understanding
 
 ## Walkthrough Overview
 
-This tutorial series starts with a **walkthrough**, which provides a high-level introduction to the model’s architecture, key modules (Pairformer and diffusion), and important features such as recycling, confidence metrics, and handling of small molecules. This walkthrough is designed to be installation-free and server-based, making it easy for users to get started without any local installations.
+This tutorial series starts with a walkthrough, which provides a high-level introduction to the model’s architecture, key modules (Pairformer and diffusion), and important features such as recycling, confidence metrics, and handling of small molecules. This walkthrough is designed to be installation-free and server-based, making it easy for users to get started without any local installations.
 
 > [Open the Walkthrough in Colab](https://colab.research.google.com/github/richcmwang/AlphaFold-3-Tutorial-Series/blob/main/tutorials/af3_walkthrough.ipynb)
 
@@ -57,3 +60,11 @@ Open the walkthrough here:
 
 Or open the first tutorial here:
  `tutorials/af3_1ATP_server_tutorial.ipynb`
+
+------
+## Contact
+I welcome questions, feedback, and suggestions! Feel free to reach out:
+
+Email: **richcmwang@gmail.com**
+
+GitHub: **richcmwang**
